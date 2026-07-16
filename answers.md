@@ -159,9 +159,9 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 * **2 thẻ sử dụng KHÔNG ĐÚNG ngữ nghĩa (Lạm dụng thẻ div):**
     * Rất nhiều đoạn văn bản ngắn (như tên sản phẩm, giá tiền) đang bị lạm dụng bọc trong thẻ `<div class="...">` hoặc `<span>` thay vì dùng các thẻ chuẩn như `<p>`, `<h3>`, hoặc `<strong>`.
     * Một số nút bấm để mở menu dropdown được code bằng thẻ `<div>` gắn sự kiện click bằng JavaScript thay vì dùng thẻ `<button>` chuẩn.
-![Ảnh Semantic](./header.png)
-![Ảnh Semantic](./main.png)
-![Ảnh Semantic](./footer.png)
+![Ảnh Semantic](.screenshots/header.png)
+![Ảnh Semantic](.screenshots/main.png)
+![Ảnh Semantic](.screenshots/footer.png)
 
 **2. Phân tích Table (Bảng thông số kỹ thuật):**
 * **Table đó hiển thị nội dung gì?:** Hiển thị bảng "Thông tin chi tiết" của một sản phẩm (gồm các thuộc tính như Thương hiệu, Xuất xứ,...).
