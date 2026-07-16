@@ -69,7 +69,7 @@ Trang web này mắc lỗi lạm dụng thẻ `<div>` (thường được giới
 <footer>
   <p>© 2026 ShopTLU</p>
 </footer>
-
+```
 
 ## Câu A3 (5đ) — Block vs Inline
 
