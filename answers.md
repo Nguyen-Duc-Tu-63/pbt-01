@@ -31,6 +31,46 @@ Trong Chrome DevTools, tab **Network** đóng vai trò như một bản ghi chi 
 ![Ảnh phân tích Chrome DevTools](./c2_A1.jpg)
 
 
+## Câu A2 (5đ) — Semantic HTML
+
+**1. Tại sao trang web trên bị Google đánh giá SEO thấp?**
+Trang web này mắc lỗi lạm dụng thẻ `<div>` (thường được giới lập trình gọi là lỗi "div soup"). Thẻ `<div>` là một thẻ vô nghĩa (non-semantic). Khi các công cụ tìm kiếm (như Google Bot) hoặc trình đọc màn hình quét qua, chúng chỉ thấy các khối hộp vô danh mà không thể phân biệt được đâu là phần đầu trang, đâu là menu điều hướng, nội dung chính hay tiêu đề bài viết. Vì không thể hiểu được cấu trúc và ngữ cảnh của nội dung, Google sẽ đánh giá điểm SEO của trang này rất thấp.
+
+**2. Liệt kê 4 lỗi semantic và cách khắc phục:**
+1. **Lỗi phần đầu trang:** Dùng `<div class="header">` thay vì thẻ chuẩn `<header>`.
+2. **Lỗi thanh điều hướng:** Dùng `<div class="menu">` cho menu. Đáng lẽ phải dùng thẻ `<nav>` kết hợp với danh sách `<ul>`, `<li>` để nhóm các liên kết lại với nhau.
+3. **Lỗi khối nội dung chính:** Dùng `<div class="main">` thay vì thẻ `<main>`. Công cụ tìm kiếm cần thẻ `<main>` để biết trọng tâm của trang nằm ở đâu.
+4. **Lỗi tiêu đề bài viết:** Dùng `<div class="title">` thay vì các thẻ Heading (như `<h1>` hoặc `<h2>`). Google rất chú trọng vào các thẻ Heading để trích xuất từ khóa chính của trang.
+*(Bổ sung thêm: Thẻ `<img>` đang bị thiếu thuộc tính `alt` để mô tả nội dung ảnh cho Google hiểu).*
+
+**3. Mã HTML sau khi đã sửa lại cho chuẩn Semantic:**
+
+```html
+<header>
+  <div class="logo">ShopTLU</div>
+  <nav class="menu">
+    <ul>
+      <li><a href="/">Trang chủ</a></li>
+      <li><a href="/products">Sản phẩm</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article class="product">
+    <h1 class="title">iPhone 16 Pro</h1>
+    <p class="price">25.990.000đ</p>
+    <div class="image">
+      <img src="iphone.jpg" alt="Điện thoại iPhone 16 Pro">
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 ShopTLU</p>
+</footer>
+
+
 
 
 
