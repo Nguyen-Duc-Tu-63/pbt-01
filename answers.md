@@ -124,7 +124,7 @@ Trong quá khứ, Web Developer thường dùng `<table>` để chia bố cục 
 2. **Khó bảo trì và code phức tạp (Code Bloat):** Layout bằng bảng đòi hỏi phải lồng ghép rất nhiều thẻ `<tr>`, `<td>` phức tạp. Khi muốn thay đổi một chi tiết nhỏ trong giao diện, bạn có thể phá vỡ toàn bộ cấu trúc các hàng/cột liên quan, khiến code rối rắm và rất khó bảo trì.
 3. **Không hỗ trợ tốt Responsive Design:** Các bảng (`table`) có tính chất cứng nhắc và rất khó để co giãn, xếp chồng giao diện mượt mà trên các thiết bị màn hình nhỏ như điện thoại di động. Thay vào đó, lập trình viên hiện đại phải sử dụng **CSS Flexbox** hoặc **CSS Grid** để tạo layout linh hoạt.
 
-
+# PHẦN B — THỰC HÀNH CODE (60 điểm)
 ## Câu B3 (15đ) — Debug HTML
 
 Danh sách các lỗi đã được tìm thấy và khắc phục trong file `debug.html`:
@@ -174,6 +174,8 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 * **Input types nào được dùng?:** Trang web sử dụng `<input type="text">` kết hợp với thuộc tính `placeholder="Tìm kiếm..."` cho ô nhập từ khóa tìm kiếm.
 ![Ảnh Semantic](./form.png)
 
+
+# PHẦN C — SUY LUẬN (20 điểm)
 ## Câu C1 (10đ) — Thiết kế cấu trúc
 
 Dưới đây là cấu trúc HTML5 chuẩn Semantic cho một trang chi tiết sản phẩm. Mỗi thẻ đều được chú thích rõ lý do sử dụng:
@@ -277,3 +279,17 @@ Dưới đây là cấu trúc HTML5 chuẩn Semantic cho một trang chi tiết 
 
 </body>
 ```
+
+## Câu C2 (10đ) — So sánh & Tranh luận
+
+**Đoạn phản biện:**
+
+Quan điểm "chỉ cần dùng `<div>` kết hợp class CSS" có thể giúp trang web hiển thị đẹp mắt, nhưng dưới góc độ kỹ thuật sâu hơn, đó là một bước lùi nghiêm trọng. Semantic HTML không được sinh ra để làm khó lập trình viên, mà để giải quyết hai vấn đề cốt lõi: SEO và Accessibility (Trợ năng).
+
+Thứ nhất, về **SEO**: Các công cụ tìm kiếm như Google Bot hoàn toàn "mù" trước các class CSS như `<div class="header">`. Khi bạn sử dụng các thẻ Semantic như `<header>`, `<main>` hay `<article>`, bot lập tức hiểu được đâu là nội dung trọng tâm, từ đó đánh giá và lập chỉ mục (index) trang web chính xác hơn, giúp cải thiện thứ hạng tìm kiếm. 
+
+Thứ hai, về **Accessibility**: Hàng triệu người khiếm thị sử dụng trình đọc màn hình (Screen Reader) để lướt web. Nhờ thẻ semantic, trình đọc màn hình cung cấp các phím tắt để họ nhảy thẳng đến khu vực `<nav>` (menu) hoặc `<main>` (nội dung chính). Nếu bạn chỉ dùng `<div>`, người dùng khiếm thị sẽ phải nghe máy đọc từng dòng một từ trên xuống dưới như một cực hình.
+
+**Ví dụ cụ thể:** Tính năng "Reader View" (Chế độ đọc) trên trình duyệt Safari hoặc Chrome có thể trích xuất chính xác bài viết để loại bỏ quảng cáo chính là nhờ lập trình viên đã bọc nội dung đó trong thẻ `<article>`. Một trang web toàn `<div>` sẽ không thể kích hoạt tính năng hữu ích này.
+
+Tuy nhiên, `<div>` không hề vô dụng. **Trường hợp thực tế phù hợp nhất để dùng `<div>`** là khi chúng ta cần tạo ra các thẻ bọc (container/wrapper) thuần túy để chia bố cục bằng CSS Flexbox hoặc Grid (ví dụ: bọc 3 thẻ `<article>` vào một `<div class="grid-layout">`). Ở vị trí này, thẻ bọc không mang thêm bất kỳ ý nghĩa ngữ nghĩa nào, nên `<div>` là sự lựa chọn chuẩn xác nhất.
