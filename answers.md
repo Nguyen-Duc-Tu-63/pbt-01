@@ -162,3 +162,8 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 ![Ảnh Semantic](./header.png)
 ![Ảnh Semantic](./main.png)
 ![Ảnh Semantic](./footer.png)
+
+**2. Phân tích Table (Bảng thông số kỹ thuật):**
+* **Table đó hiển thị nội dung gì?:** Hiển thị bảng "Thông tin chi tiết" của một sản phẩm (gồm các thuộc tính như Thương hiệu, Xuất xứ,...).
+* **Có dùng `<thead>`, `<tbody>` không?:** Không sử dụng mà sử dụng div để bọc.
+![Ảnh Semantic](./table.png)
