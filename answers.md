@@ -105,7 +105,24 @@ Nguyên lý hiển thị của HTML dựa vào đặc tính mặc định của 
 5.  `<div>Hộp 3</div>`: Là thẻ Block, tiếp tục bị đẩy xuống một dòng mới đứng một mình.
 
 
+## Câu A4 (5đ) — Table
 
+> *Nguồn tham chiếu: File `05_tables_hyperlinks.md` — Mục "📊 Table — Bảng dữ liệu"*
+
+**1. Sự khác nhau giữa `<thead>`, `<tbody>`, `<tfoot>`:**
+
+Ba thẻ này được sử dụng để phân chia cấu trúc ngữ nghĩa (semantic) của một bảng dữ liệu (`<table>`), giúp trình duyệt và công cụ tìm kiếm hiểu rõ các thành phần của bảng:
+* **`<thead>` (Table Head):** Nhóm các hàng chứa tiêu đề cột của bảng. Thường chứa các thẻ `<th>` (Table Header Cell) để in đậm tiêu đề.
+* **`<tbody>` (Table Body):** Chứa phần thân của bảng, là nơi đặt các hàng dữ liệu chính chi tiết (thẻ `<td>`). Một bảng có thể có nhiều thẻ `<tbody>`.
+* **`<tfoot>` (Table Foot):** Chứa phần chân bảng, thường dùng cho các hàng tổng kết, tính tổng, hoặc ghi chú dữ liệu (ví dụ: "Tổng sản phẩm", "Tổng tiền").
+
+**2. Tại sao KHÔNG NÊN dùng table để tạo layout trang web?**
+
+Trong quá khứ, Web Developer thường dùng `<table>` để chia bố cục trang (layout) vì nó dễ định hình. Tuy nhiên, hiện tại đây là một phương pháp **sai lầm** vì 3 lý do chính sau:
+
+1. **Sai mục đích ngữ nghĩa (Semantic):** Thẻ `<table>` sinh ra chỉ để chứa **dữ liệu dạng bảng** (data tabular) như danh sách, so sánh, thống kê. Việc ép nó làm layout sẽ khiến các công cụ tìm kiếm (như Google Bot) và trình đọc màn hình hiểu sai cấu trúc trang, làm giảm nghiêm trọng điểm SEO.
+2. **Khó bảo trì và code phức tạp (Code Bloat):** Layout bằng bảng đòi hỏi phải lồng ghép rất nhiều thẻ `<tr>`, `<td>` phức tạp. Khi muốn thay đổi một chi tiết nhỏ trong giao diện, bạn có thể phá vỡ toàn bộ cấu trúc các hàng/cột liên quan, khiến code rối rắm và rất khó bảo trì.
+3. **Không hỗ trợ tốt Responsive Design:** Các bảng (`table`) có tính chất cứng nhắc và rất khó để co giãn, xếp chồng giao diện mượt mà trên các thiết bị màn hình nhỏ như điện thoại di động. Thay vào đó, lập trình viên hiện đại phải sử dụng **CSS Flexbox** hoặc **CSS Grid** để tạo layout linh hoạt.
 
 
 
