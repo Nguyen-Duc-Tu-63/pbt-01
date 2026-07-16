@@ -88,7 +88,7 @@ Kết quả hiển thị trên trình duyệt sẽ có dạng như sau:
 +--------------------------------------------------+
 | Hộp 3                                            |
 +--------------------------------------------------+
-
+*(Lưu ý: Chữ "Text D" sẽ được in đậm do nằm trong thẻ <strong>)*
 
 **2. Giải thích chi tiết tại sao lại hiển thị như vậy:**
 
@@ -103,6 +103,7 @@ Nguyên lý hiển thị của HTML dựa vào đặc tính mặc định của 
 3.  `<div>Hộp 2</div>`: Là thẻ Block. Dù dòng chứa Text A & B vẫn còn chỗ, `<div>` này vẫn ép nó xuống một dòng mới, chiếm trọn 1 dòng.
 4.  `<span>Text C</span>` và `<strong>Text D</strong>`: Đều là thẻ Inline. Tương tự như trên, chúng đứng cạnh nhau trên dòng mới tạo thành `Text C Text D` (trong đó Text D bị làm đậm bởi thẻ `<strong>`).
 5.  `<div>Hộp 3</div>`: Là thẻ Block, tiếp tục bị đẩy xuống một dòng mới đứng một mình.
+
 
 
 
