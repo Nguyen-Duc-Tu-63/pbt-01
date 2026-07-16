@@ -147,3 +147,18 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 ![Ảnh giao diện Debug](./debug_b3.png)
 
 
+## Câu B4 (15đ) — Phân tích trang web thật
+
+**Trang web được chọn:** `tiki.vn`
+
+**1. Phân tích thẻ Semantic (Tab Elements):**
+* **3 thẻ Semantic HTML5 được sử dụng đúng:**
+    * `<header>`: Bao bọc toàn bộ phần đầu trang (chứa logo, thanh tìm kiếm, giỏ hàng, menu tài khoản).
+    * `<main>`: Bọc phần thân chính chứa các danh sách sản phẩm và banner khuyến mãi.
+    * `<footer>`: Nằm ở cuối trang, chứa các liên kết hỗ trợ khách hàng, thông tin công ty và chứng nhận.
+* **2 thẻ sử dụng KHÔNG ĐÚNG ngữ nghĩa (Lạm dụng thẻ div):**
+    * Rất nhiều đoạn văn bản ngắn (như tên sản phẩm, giá tiền) đang bị lạm dụng bọc trong thẻ `<div class="...">` hoặc `<span>` thay vì dùng các thẻ chuẩn như `<p>`, `<h3>`, hoặc `<strong>`.
+    * Một số nút bấm để mở menu dropdown được code bằng thẻ `<div>` gắn sự kiện click bằng JavaScript thay vì dùng thẻ `<button>` chuẩn.
+![Ảnh Semantic](./header.png)
+![Ảnh Semantic](./main.png)
+![Ảnh Semantic](./footer.png)
