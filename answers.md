@@ -167,3 +167,9 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 * **Table đó hiển thị nội dung gì?:** Hiển thị bảng "Thông tin chi tiết" của một sản phẩm (gồm các thuộc tính như Thương hiệu, Xuất xứ,...).
 * **Có dùng `<thead>`, `<tbody>` không?:** Không sử dụng mà sử dụng div để bọc.
 ![Ảnh Semantic](./table.png)
+
+**3. Phân tích Form (Thanh tìm kiếm):**
+* **Phát hiện thực tế:** Trên trang Tiki.vn, thanh tìm kiếm hiện tại **KHÔNG** sử dụng thẻ `<form>` chuẩn HTML5. Thay vào đó, họ dùng các thẻ `<div>` bao bọc một thẻ `<input>` và `<button>`. 
+* **Form đó có action và method gì?:** Vì không có thẻ `<form>`, nên hệ thống không sử dụng `action` và `method` của HTML. Thay vào đó, Tiki sử dụng JavaScript (ReactJS) để bắt sự kiện gõ phím Enter hoặc click nút "Tìm kiếm", sau đó gửi request ngầm (AJAX/Fetch) đến máy chủ. Đây cũng có thể tính là một lỗi **không dùng đúng semantic HTML**.
+* **Input types nào được dùng?:** Trang web sử dụng `<input type="text">` kết hợp với thuộc tính `placeholder="Tìm kiếm..."` cho ô nhập từ khóa tìm kiếm.
+![Ảnh Semantic](./form.png)
