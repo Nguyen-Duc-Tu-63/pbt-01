@@ -173,3 +173,107 @@ Danh sách các lỗi đã được tìm thấy và khắc phục trong file `de
 * **Form đó có action và method gì?:** Vì không có thẻ `<form>`, nên hệ thống không sử dụng `action` và `method` của HTML. Thay vào đó, Tiki sử dụng JavaScript (ReactJS) để bắt sự kiện gõ phím Enter hoặc click nút "Tìm kiếm", sau đó gửi request ngầm (AJAX/Fetch) đến máy chủ. Đây cũng có thể tính là một lỗi **không dùng đúng semantic HTML**.
 * **Input types nào được dùng?:** Trang web sử dụng `<input type="text">` kết hợp với thuộc tính `placeholder="Tìm kiếm..."` cho ô nhập từ khóa tìm kiếm.
 ![Ảnh Semantic](./form.png)
+
+## Câu C1 (10đ) — Thiết kế cấu trúc
+
+Dưới đây là cấu trúc HTML5 chuẩn Semantic cho một trang chi tiết sản phẩm. Mỗi thẻ đều được chú thích rõ lý do sử dụng:
+
+```html
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li><a href="/category">Điện thoại</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <nav aria-label="breadcrumb">
+            <ol>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/dien-thoai">Điện thoại</a></li>
+                <li aria-current="page">iPhone 16</li>
+            </ol>
+        </nav>
+
+        <article>
+            
+            <section id="product-overview">
+                
+                <figure>
+                    <img src="img1.jpg" alt="Ảnh chính iPhone 16">
+                    <img src="img2.jpg" alt="Ảnh phụ 1">
+                    <img src="img3.jpg" alt="Ảnh phụ 2">
+                    <img src="img4.jpg" alt="Ảnh phụ 3">
+                    <img src="img5.jpg" alt="Ảnh phụ 4">
+                    <figcaption>Hình ảnh chi tiết của iPhone 16</figcaption>
+                </figure>
+
+                <header>
+                    <h1>iPhone 16 Pro 256GB</h1>
+                    
+                    <div class="rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                        <a href="#reviews">(120 đánh giá)</a>
+                    </div>
+
+                    <p class="price">
+                        <strong>25.990.000đ</strong>
+                    </p>
+                </header>
+
+                <p>Mô tả chi tiết về các tính năng vượt trội của iPhone 16 Pro...</p>
+            </section>
+
+            <section id="specifications">
+                <h2>Thông số kỹ thuật</h2>
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Màn hình</th>
+                            <td>6.7 inch, Super Retina XDR</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Chip</th>
+                            <td>A18 Pro</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="reviews">
+                <h2>Đánh giá từ khách hàng</h2>
+                
+                <article class="review-item">
+                    <header>
+                        <h3>Người dùng A</h3>
+                        <time datetime="2026-07-17">17/07/2026</time>
+                    </header>
+                    <p>Sản phẩm rất tốt, chụp ảnh siêu nét!</p>
+                </article>
+            </section>
+
+        </article>
+    </main>
+
+    <aside id="related-products">
+        <h2>Sản phẩm tương tự</h2>
+        <ul>
+            <li><a href="#">iPhone 15 Pro</a></li>
+            <li><a href="#">Samsung Galaxy S24 Ultra</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 ShopTLU. All rights reserved.</p>
+    </footer>
+
+</body>
+```
