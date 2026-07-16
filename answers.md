@@ -71,6 +71,39 @@ Trang web này mắc lỗi lạm dụng thẻ `<div>` (thường được giới
 </footer>
 
 
+## Câu A3 (5đ) — Block vs Inline
+
+**1. Mô phỏng kết quả hiển thị (Text Art):**
+
+Kết quả hiển thị trên trình duyệt sẽ có dạng như sau:
+
++--------------------------------------------------+
+| Hộp 1                                            |
++--------------------------------------------------+
+| Text A Text B                                    |
++--------------------------------------------------+
+| Hộp 2                                            |
++--------------------------------------------------+
+| Text C **Text D** |
++--------------------------------------------------+
+| Hộp 3                                            |
++--------------------------------------------------+
+
+
+**2. Giải thích chi tiết tại sao lại hiển thị như vậy:**
+
+Nguyên lý hiển thị của HTML dựa vào đặc tính mặc định của các thẻ (Block hoặc Inline):
+
+* **Thẻ Block (như `<div>`):** Luôn luôn bắt đầu trên một dòng mới và chiếm toàn bộ chiều rộng có thể của phần tử chứa nó (dù nội dung bên trong rất ngắn).
+* **Thẻ Inline (như `<span>`, `<strong>`):** Không bắt đầu trên dòng mới, chúng chỉ chiếm khoảng không gian vừa đủ chứa nội dung bên trong và sẽ nằm cạnh nhau trên cùng một dòng (trừ khi hết chỗ mới bị rớt dòng).
+
+**Phân tích từng dòng code:**
+1.  `<div>Hộp 1</div>`: Là thẻ Block, nên "Hộp 1" đứng riêng một dòng và chiếm hết chiều ngang.
+2.  `<span>Text A</span>` và `<span>Text B</span>`: Đều là thẻ Inline. Chúng sẽ nằm ngay cạnh nhau trên cùng một dòng tiếp theo tạo thành `Text A Text B`.
+3.  `<div>Hộp 2</div>`: Là thẻ Block. Dù dòng chứa Text A & B vẫn còn chỗ, `<div>` này vẫn ép nó xuống một dòng mới, chiếm trọn 1 dòng.
+4.  `<span>Text C</span>` và `<strong>Text D</strong>`: Đều là thẻ Inline. Tương tự như trên, chúng đứng cạnh nhau trên dòng mới tạo thành `Text C Text D` (trong đó Text D bị làm đậm bởi thẻ `<strong>`).
+5.  `<div>Hộp 3</div>`: Là thẻ Block, tiếp tục bị đẩy xuống một dòng mới đứng một mình.
+
 
 
 
