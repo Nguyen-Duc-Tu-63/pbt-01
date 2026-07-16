@@ -125,4 +125,25 @@ Trong quá khứ, Web Developer thường dùng `<table>` để chia bố cục 
 3. **Không hỗ trợ tốt Responsive Design:** Các bảng (`table`) có tính chất cứng nhắc và rất khó để co giãn, xếp chồng giao diện mượt mà trên các thiết bị màn hình nhỏ như điện thoại di động. Thay vào đó, lập trình viên hiện đại phải sử dụng **CSS Flexbox** hoặc **CSS Grid** để tạo layout linh hoạt.
 
 
+## Câu B3 (15đ) — Debug HTML
+
+Danh sách các lỗi đã được tìm thấy và khắc phục trong file `debug.html`:
+
+* **Lỗi 1: Dòng 1 — Thiếu định dạng chuẩn của HTML5** — Sửa `<!DOCTYPE>` thành `<!DOCTYPE html>`.
+* **Lỗi 2: Dòng 1 & 2 — Thiếu thẻ `<html>` chuẩn và quên đóng thẻ `<title>`** — Bổ sung thuộc tính ngôn ngữ `<html lang="vi">` và thêm thẻ đóng `</title>`.
+* **Lỗi 3: Dòng 3 — Sai giá trị bảng mã ký tự** — Sửa `<meta charset="utf8">` thành `<meta charset="UTF-8">`.
+* **Lỗi 4: Dòng 4 — Sai cú pháp thẻ đóng `<h1>`** — Thẻ đóng bị thiếu dấu gạch chéo, sửa `<h1>...<h1>` thành `<h1>...</h1>`.
+* **Lỗi 5: Dòng 4 & 6 — Lỗi ngữ nghĩa (Semantic) phần Header** — Thẻ `<h1>` đang nằm phơi bày bên ngoài, cần được đưa vào bên trong thẻ `<header>` để nhóm cấu trúc hợp lý.
+* **Lỗi 6: Dòng 8 — Sai cú pháp thẻ đóng `<a>`** — Thẻ đóng của link "Trang chủ" bị thiếu dấu gạch chéo, sửa `<a>...<a>` thành `<a>...</a>`.
+* **Lỗi 7: Dòng 15 & 22 — Lỗi nhảy cóc cấp độ tiêu đề (Heading)** — Đang dùng `<h3>` ngay sau `<h1>` (bỏ qua `<h2>`). Cần đổi `<h3>` thành `<h2>` cho đúng cấu trúc.
+* **Lỗi 8: Dòng 16 — Thiếu ngoặc kép và thiếu thuộc tính `alt` của ảnh** — Sửa `<img src=iphone.jpg>` thành `<img src="iphone.jpg" alt="Điện thoại iPhone 16 Pro">`.
+* **Lỗi 9: Dòng 18 — Lỗi lồng chéo thẻ (Overlapping tags)** — Mở `<b>` trước nhưng lại đóng `</p>` trước. Sửa lại thứ tự thành `<p>...<strong>...</strong></p>` (đồng thời đổi `<b>` thành `<strong>` cho chuẩn Semantic).
+* **Lỗi 10: Dòng 24 đến 27 — Lỗi ngữ nghĩa bảng (Table Header)** — Các ô tiêu đề của bảng đang dùng thẻ dữ liệu `<td>`, cần sửa thành thẻ tiêu đề `<th>`.
+* **Lỗi 11: Dòng 36 đến 38 — Lỗi lạm dụng `<main>` và sai cấu trúc Sidebar** — Một trang web chỉ được có 1 thẻ `<main>`. Phần chứa "Sidebar content" phải được đổi thành thẻ `<aside>`.
+* **Lỗi 12: Dòng 41 — Quên đóng thẻ đoạn văn** — Sửa `<p>Copyright 2026` thành `<p>Copyright 2026</p>`.
+
+**Ảnh chụp kết quả hiển thị của trang web sau khi Debug:**
+
+![Ảnh giao diện Debug](./debug_b3.png)
+
 
